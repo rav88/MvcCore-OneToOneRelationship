@@ -1,0 +1,67 @@
+﻿@model MvcDzien3Configs.Models.CustomerModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CustomerModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateAdded)
+        </dd>
+	    <dt>
+		    @Html.DisplayNameFor(model => model.DateUpdated)
+	    </dt>
+	    <dd>
+		    @Html.DisplayFor(model => model.DateUpdated)
+	    </dd>
+	    <dt>
+		    @Html.DisplayNameFor(model => model.Address.Street)
+	    </dt>
+	    <dd>
+		    @Html.DisplayFor(model => model.Address.Street)
+	    </dd>
+	    <dt>
+		    @Html.DisplayNameFor(model => model.Address.City)
+	    </dt>
+	    <dd>
+		    @Html.DisplayFor(model => model.Address.City)
+	    </dd>
+	    <dt>
+		    @Html.DisplayNameFor(model => model.Address.PostalCode)
+	    </dt>
+	    <dd>
+		    @Html.DisplayFor(model => model.Address.PostalCode)
+	    </dd>
+    </dl>
+</div>
+<div>
+	<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+	<a asp-action="Index" asp-controller="Consultations" asp-route-id="@Model.Id">Consultation List</a> |
+	<a asp-action="Index">Back to List</a>
+</div>
